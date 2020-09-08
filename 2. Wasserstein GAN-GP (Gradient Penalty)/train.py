@@ -37,26 +37,12 @@ def train():
     D = Discriminator().to(device)
     G = Generator().to(device)
 
-    # Loss Function #
-    criterion = nn.BCELoss().to(device)
-
-    if config.ls_gan:
-        criterion = nn.MSELoss().to(device)
-
     # Optimizers #
     D_optim = torch.optim.Adam(D.parameters(), lr=config.lr, betas=(0.5, 0.999))
     G_optim = torch.optim.Adam(G.parameters(), lr=config.lr, betas=(0.5, 0.999))
 
     D_optim_scheduler = get_lr_scheduler(D_optim)
     G_optim_scheduler = get_lr_scheduler(G_optim)
-
-    # Labels #
-    real_label = 1
-    fake_label = 0
-
-    if config.smoothed:
-        real_label = 0.9
-        fake_label = 0.1
 
     # Lists #
     D_losses, G_losses = [], []
@@ -73,9 +59,6 @@ def train():
             # Data Preparation #
             images = images.to(device)
 
-            real_labels = torch.full((config.batch_size, ), real_label, device=device, dtype=torch.float)
-            fake_labels = torch.full((config.batch_size, ), fake_label, device=device, dtype=torch.float)
-
             # Initialize Optimizers #
             G_optim.zero_grad()
             D_optim.zero_grad()
@@ -86,16 +69,19 @@ def train():
 
             # Adversarial Loss using Real Image #
             prob_real = D(images)
-            D_real_loss = criterion(prob_real, real_labels)
+            D_real_loss = -torch.mean(prob_real)
 
             # Adversarial Loss using Fake Image #
             noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
             fake_images = G(noise)
             prob_fake = D(fake_images.detach())
-            D_fake_loss = criterion(prob_fake, fake_labels)
+            D_fake_loss = torch.mean(prob_fake)
+
+            # Discriminiator Loss using Wasserstein GAN Gradient Penalty #
+            D_gp_loss = config.lambda_gp * get_gradient_penalty(images, fake_images, D)
 
             # Calculate Total Discriminator Loss #
-            D_loss = D_fake_loss + D_real_loss
+            D_loss = D_fake_loss + D_real_loss + config.lambda_gp * D_gp_loss
 
             # Back Propagation and Update #
             D_loss.backward()
@@ -105,16 +91,18 @@ def train():
             # Train Generator #
             ###################
 
-            # Adversarial Loss #
-            fake_images = G(noise)
-            prob_fake = D(fake_images)
+            for j in range(config.n_critics):
 
-            # Calculate Total Generator Loss #
-            G_loss = criterion(prob_fake, real_labels)
+                # Adversarial Loss #
+                fake_images = G(noise)
+                prob_fake = D(fake_images)
 
-            # Back Propagation and Update #
-            G_loss.backward()
-            G_optim.step()
+                # Calculate Total Generator Loss #
+                G_loss = -torch.mean(prob_fake)
+
+                # Back Propagation and Update #
+                G_loss.backward()
+                G_optim.step()
 
             # Add items to Lists #
             D_losses.append(D_loss.item())

@@ -58,6 +58,33 @@ def get_lr_scheduler(optimizer):
     return scheduler
 
 
+def set_requires_grad(networks, requires_grad=False):
+    """Prevent a Network from Updating"""
+    for network in networks:
+        for param in network.parameters():
+            param.requires_grad = requires_grad
+
+
+def get_gradient_penalty(real_image, fake_image, discriminator):
+    """Compute Gradient Penalty"""
+    alpha = torch.rand(real_image.size(0), 1, 1, 1).to(device)
+    interpolate = (alpha * real_image.data + (1 - alpha) * fake_image.data).requires_grad_(True)
+    prob_interpolate = discriminator(interpolate)
+    weight = torch.ones(prob_interpolate.size()).to(device)
+
+    gradients = grad(outputs=prob_interpolate,
+                     inputs=interpolate,
+                     grad_outputs=weight,
+                     retain_graph=True,
+                     create_graph=True,
+                     only_inputs=True)[0]
+
+    gradients = gradients.view(gradients.size(0), -1)
+    gradients_l2norm = torch.sqrt(torch.sum(gradients ** 2, dim=1))
+    out = torch.mean((gradients_l2norm - 1)**2)
+
+    return out
+
 def denorm(x):
     """De-normalization"""
     out = (x+1) / 2

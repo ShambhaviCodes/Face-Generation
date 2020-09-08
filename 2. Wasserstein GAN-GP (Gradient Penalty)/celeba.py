@@ -17,9 +17,3 @@ def get_celeba_loader(path, batch_size):
     celeba_loader = DataLoader(celeba_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
 
     return celeba_loader
-
-
-if __name__ == "__main__":
-    path_1 = './results/inference/'
-    path_1_dataset = ImageFolder(root=path_1)
-    print(len(path_1_dataset))

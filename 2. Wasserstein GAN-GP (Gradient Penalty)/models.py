@@ -27,8 +27,7 @@ class Discriminator(nn.Module):
             nn.BatchNorm2d(self.ndf*8),
             nn.LeakyReLU(0.2, inplace=True),
 
-            nn.Conv2d(self.ndf*8, self.out_channel, 4, 1, 0, bias=False),
-            nn.Sigmoid()
+            nn.Conv2d(self.ndf*8, self.out_channel, 4, 1, 0, bias=False)
         )
 
     def forward(self, x):
