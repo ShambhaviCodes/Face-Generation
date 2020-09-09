@@ -7,7 +7,9 @@ parser.add_argument('--crop_size', type=int, default=64, help='crop size for ima
 parser.add_argument('--num_epochs', type=int, default=100, help='total epoch for training')
 parser.add_argument('--print_every', type=int, default=100, help='print statistics for every default iteration')
 parser.add_argument('--save_every', type=int, default=10, help='save model weights for every default epoch')
+
 parser.add_argument('--noise_dim', type=int, default=100, help='noise dimension')
+parser.add_argument('--limit', type=int, default=1e5, help='the number of images to be generated for inference')
 
 parser.add_argument('--lambda_gp', type=int, default=10, help='constant for gradient penalty')
 parser.add_argument("--n_critics", type=int, default=5, help="number of training iterations for WGAN discriminator")
@@ -21,7 +23,7 @@ parser.add_argument('--celeba_path', type=str, default='./celeba/', help='CelebA
 parser.add_argument('--samples_path', type=str, default='./results/samples/', help='samples path')
 parser.add_argument('--weights_path', type=str, default='./results/weights/', help='weights path')
 parser.add_argument('--plots_path', type=str,  default='./results/plots/', help='plots path')
-parser.add_argument('--inference_path', type=str,  default='./results/inference/', help='inference path')
+parser.add_argument('--inference_path', type=str,  default='./results/inference/inference/', help='inference path')
 
 parser.add_argument('-f')
 config = parser.parse_args()

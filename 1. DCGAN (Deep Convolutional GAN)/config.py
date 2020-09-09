@@ -7,6 +7,7 @@ parser.add_argument('--crop_size', type=int, default=64, help='crop size for ima
 parser.add_argument('--num_epochs', type=int, default=100, help='total epoch for training')
 parser.add_argument('--print_every', type=int, default=100, help='print statistics for every default iteration')
 parser.add_argument('--save_every', type=int, default=10, help='save model weights for every default epoch')
+
 parser.add_argument('--noise_dim', type=int, default=100, help='noise dimension')
 parser.add_argument('--limit', type=int, default=1e5, help='the number of images to be generated for inference')
 
