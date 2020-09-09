@@ -10,9 +10,9 @@
 This repository contains implementation of various GANs using CelebA dataset, including DCGAN, LSGAN, Improved Techniques for Training GANs, WGAN-GP and such.
 
 ### 2. Qualitative Analysis
-| Model | DCGAN | WGAN-GP |
+| DCGAN | WGAN-GP | BEGAN |
 |:-----:|:-----:|:-----:|
-| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> |
+| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | - |
 
 ### 3. Quantitative Analysis
 | Model | IS↑ | FID↓ |
