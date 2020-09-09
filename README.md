@@ -9,26 +9,13 @@
 
 This repository contains implementation of various GANs using CelebA dataset, including DCGAN, LSGAN, Improved Techniques for Training GANs, WGAN-GP and such.
 
-### 1. Dataset
-Download the CelebA dataset from this [link](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
-After downloading the dataset, please check if the directory corresponds to below:
-```
-+---[data]
-|   \---[celeba]
-|       \---[img_align_celeba]
-|           +---[000001.jpg]
-|           |...
-|           +---[202599.jpg]
-+---celeba.py
-+---config.py
-|   ...
-+---walking in the latent space.ipynb
-```
-
 ### 2. Qualitative Analysis
+| Model | DCGAN | WGAN-GP |
+|:-----:|:-----:|:-----:|
+| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> |
 
 ### 3. Quantitative Analysis
-| Model | IS | FID |
+| Model | IS↑ | FID↓ |
 |:-----:|:-----:|:-----:|
-| DCGAN | 2.827 ± 0.0164 | - |
-| WGAN-GP | - | - |
+| DCGAN | 2.827 ± 0.0164 | 6.600 |
+| WGAN-GP | 2.735 ± 0.0141 | 5.857 |
