@@ -1,10 +1,5 @@
 # Face-Generation
 
-- [ ] Add results
-- [ ] Add link for celeba dataset and pre-trained files
-- [ ] BEGAN
-- [ ] SAGAN
-
 ### 0. Introduction
 
 This repository contains implementation of various GANs using CelebA dataset, including DCGAN, LSGAN, Improved Techniques for Training GANs, WGAN-GP and such.
