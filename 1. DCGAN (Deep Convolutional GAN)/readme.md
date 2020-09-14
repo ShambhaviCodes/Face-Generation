@@ -17,6 +17,9 @@ This folder contains the implementation of three papers: DCGAN, LSGAN and Smooth
 |:-----:|:-----:|:-----:|
 | DCGAN | 2.827 ± 0.0164 | 6.60 |
 
+3) Interpolation
+<img src = './results/interpolation/Generated_Face_Interpolation.png'>
+
 ### 1. Dataset
 Download the CelebA dataset from this [link](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
 After downloading the dataset, please check if the directory corresponds to below:
@@ -63,7 +66,7 @@ python inception_score.py
 
 4) Calculate FID (Frechet Inception Distance) Score
 ```
-python fid_score.py './data/celeba/img_align_celeba/ './results/inference/inference/'
+python fid_score.py './celeba/img_align_celeba/ './results/inference/inference/'
 ```
 
 ### 3. Plot Loss
