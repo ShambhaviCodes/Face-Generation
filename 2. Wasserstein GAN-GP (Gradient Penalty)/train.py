@@ -47,7 +47,7 @@ def train():
     # Lists #
     D_losses, G_losses = [], []
 
-    # Fixed Noise
+    # Fixed Noise #
     fixed_noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
 
     # Train #

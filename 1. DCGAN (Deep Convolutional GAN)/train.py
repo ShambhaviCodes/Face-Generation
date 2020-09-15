@@ -61,7 +61,7 @@ def train():
     # Lists #
     D_losses, G_losses = [], []
 
-    # Fixed Noise
+    # Fixed Noise #
     fixed_noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
 
     # Train #
@@ -125,7 +125,7 @@ def train():
             ####################
 
             if (i+1) % config.print_every == 0:
-                print("Epochs [{}/{}] | Iterations [{}/{}] | Loss D {:.4f} | Loss G {:.4f}".
+                print("Epochs [{}/{}] | Iterations [{}/{}] | D Loss {:.4f} | G Loss {:.4f}".
                       format(epoch+1, config.num_epochs, i+1, total_batch, np.average(D_losses), np.average(G_losses)))
 
         # Sample Images #

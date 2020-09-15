@@ -4,7 +4,7 @@ import torch
 from torchvision.utils import save_image
 
 from config import *
-from models import *
+from models import Generator
 from utils import make_dirs, denorm
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -12,7 +12,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def generate_faces():
 
-    # Test Path #
+    # Inference Path #
     make_dirs(config.inference_path)
 
     # Prepare Generator #

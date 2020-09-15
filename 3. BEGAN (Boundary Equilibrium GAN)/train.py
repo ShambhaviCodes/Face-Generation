@@ -51,8 +51,7 @@ def train():
     D_losses, G_losses = [], []
 
     # Fixed Noise #
-    fixed_noise = torch.FloatTensor(config.batch_size, config.noise_dim).to(device)
-    fixed_noise = fixed_noise.data.uniform_(-1, 1)
+    fixed_noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
 
     # Constants #
     k_t = 0
@@ -68,8 +67,7 @@ def train():
             # Data Preparation #
             images = images.to(device)
 
-            noise = torch.FloatTensor(config.batch_size, config.noise_dim).to(device)
-            noise = noise.data.uniform_(-1, 1)
+            noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
 
             # Initialize Optimizers #
             D_optim.zero_grad()
@@ -127,6 +125,7 @@ def train():
                 print("Epoch [{}/{}] | Iter [{}/{}] | D Loss {:.4f} | G Loss {:.4f}"
                       .format(epoch+1, config.num_epochs, i+1, total_batch, np.average(D_losses), np.average(G_losses)))
 
+        # Sample Images #
         sample_images(G, fixed_noise, epoch)
 
         # Adjust Learning Rate #

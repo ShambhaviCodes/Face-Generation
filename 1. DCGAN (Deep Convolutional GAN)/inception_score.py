@@ -4,9 +4,8 @@ from scipy.stats import entropy
 
 import torch
 from torch import nn
-from torch.autograd import Variable
 from torch.nn import functional as F
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 
 import torchvision.transforms as transforms
 from torchvision.models.inception import inception_v3

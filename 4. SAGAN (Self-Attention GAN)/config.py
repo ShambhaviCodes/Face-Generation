@@ -20,7 +20,7 @@ parser.add_argument('--celeba_path', type=str, default='./celeba/', help='CelebA
 parser.add_argument('--samples_path', type=str, default='./results/samples/', help='samples path')
 parser.add_argument('--weights_path', type=str, default='./results/weights/', help='weights path')
 parser.add_argument('--plots_path', type=str,  default='./results/plots/', help='plots path')
-parser.add_argument('--inference_path', type=str,  default='./results/inference/', help='inference path')
+parser.add_argument('--inference_path', type=str,  default='./results/inference/inference/', help='inference path')
 
 parser.add_argument('-f')
 config = parser.parse_args()

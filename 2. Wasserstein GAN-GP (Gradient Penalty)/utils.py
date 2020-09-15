@@ -85,6 +85,7 @@ def get_gradient_penalty(real_image, fake_image, discriminator):
 
     return out
 
+
 def denorm(x):
     """De-normalization"""
     out = (x+1) / 2
@@ -122,17 +123,4 @@ def make_gifs_train(title, path):
         generated_images.append(imageio.imread(file))
 
     imageio.mimsave(path + '{}_Train_Results.gif'.format(title), generated_images, fps=2)
-    print("{} gif file is generated.".format(title))
-
-
-def make_gifs_test(title, direction, path):
-    """Create a GIF file After Inference"""
-    images = os.listdir(path)
-    generated_images = []
-
-    for i in range(len(images)):
-        file = os.path.join(path, '%s_%s_Results_%03d.png' % (title, direction, i + 1))
-        generated_images.append(imageio.imread(file))
-
-    imageio.mimsave(path + '{}_{}_Test_Results.gif'.format(title, direction), generated_images, fps=2)
     print("{} gif file is generated.".format(title))

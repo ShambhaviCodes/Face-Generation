@@ -26,7 +26,7 @@ def generate_faces():
     while (True):
 
         # Prepare Fixed Noise and Generator #
-        noise = torch.randn(config.batch_size, config.noise_dim, 1, 1).to(device)
+        noise = torch.randn(config.batch_size, config.noise_dim).to(device)
         generated = G(noise)
 
         for i in range(config.batch_size):

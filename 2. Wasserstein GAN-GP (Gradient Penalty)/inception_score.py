@@ -4,9 +4,8 @@ from scipy.stats import entropy
 
 import torch
 from torch import nn
-from torch.autograd import Variable
 from torch.nn import functional as F
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 
 import torchvision.transforms as transforms
 from torchvision.models.inception import inception_v3
@@ -31,7 +30,7 @@ def inception_score(splits=10):
     # Load Inception Model #
     inception_model = inception_v3(pretrained=True, transform_input=False).type(torch.FloatTensor).to(device)
     inception_model.eval()
-    up = nn.Upsample(size=(299, 299), align_corners=True).type(torch.FloatTensor).to(device)
+    up = nn.Upsample(size=(299, 299), mode='bilinear').type(torch.FloatTensor).to(device)
 
     def get_pred(x):
         x = up(x)
