@@ -1,4 +1,4 @@
-This folder contains the implementation of BEGAN.
+This folder contains the implementation of SAGAN.
 
 ### 0. Introduction
 - SAGAN: [Self-Attention Generative Adversarial Networks](https://arxiv.org/pdf/1805.08318.pdf)
