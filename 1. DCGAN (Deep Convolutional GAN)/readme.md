@@ -1,9 +1,9 @@
 This folder contains the implementation of three papers: DCGAN, LSGAN and Smoothed labels.
 
 ### 0. Introduction
-- DCGAN: [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434.pdf)
-- LSGAN: [Least Squares Generative Adversarial Networks](https://arxiv.org/abs/1611.04076.pdf)
-- Smoothed labels: [Improved Techniques for Training GAN](https://arxiv.org/abs/1606.03498.pdf)
+- DCGAN: [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434.pdf)
+- LSGAN: [Least Squares Generative Adversarial Networks](https://arxiv.org/pdf/1611.04076.pdf)
+- Smoothed labels: [Improved Techniques for Training GAN](https://arxiv.org/pdf/1606.03498.pdf)
 
 
 ### 1. Results
