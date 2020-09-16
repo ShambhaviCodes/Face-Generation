@@ -123,6 +123,7 @@ def train():
                 print("Epochs [{}/{}] | Iterations [{}/{}] | D Loss {:.4f} | G Loss {:.4f}"
                       .format(epoch+1, config.num_epochs, i+1, total_batch, np.mean(D_losses), np.mean(G_losses)))
 
+        # Sample Images #
         sample_images(G, fixed_noise, epoch)
 
         # Adjust Learning Rate #

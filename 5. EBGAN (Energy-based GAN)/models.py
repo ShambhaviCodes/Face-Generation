@@ -40,13 +40,13 @@ class Decoder(nn.Module):
         self.main = nn.Sequential(
             nn.ConvTranspose2d(self.ngf * 4, self.ngf * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(self.ngf * 2),
-            nn.ReLU(inplace=True),
+            nn.LeakyReLU(0.2, inplace=True),
 
             nn.ConvTranspose2d(self.ngf * 2, self.ngf, 4, 2, 1, bias=False),
             nn.BatchNorm2d(self.ngf),
-            nn.ReLU(inplace=True),
+            nn.LeakyReLU(0.2, inplace=True),
 
-            nn.ConvTranspose2d(self.ngf, self.out_channel, 4, 2, 1, bias=False)
+            nn.ConvTranspose2d(self.ngf, self.out_channel, 4, 2, 1, bias=False),
         )
 
     def forward(self, x):
