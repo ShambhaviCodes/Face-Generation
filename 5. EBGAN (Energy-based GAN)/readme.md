@@ -13,7 +13,7 @@ This folder contains the implementation of EBGAN.
 
 | Model | IS↑ | FID↓ |
 |:-----:|:-----:|:-----:|
-| EBGAN | - | - |
+| EBGAN | 2.499 ± 0.0186 | 4.946 |
 
 3) Interpolation
 
