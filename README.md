@@ -25,7 +25,15 @@ This repository contains implementations of various GANs using CelebA dataset. T
 | SAGAN | 2.094 ± 0.0174 | 6.140 |
 | EBGAN | 2.499 ± 0.0186 | 4.946 |
 
-### 3. Acknowledgement
+### 3. Development Environment
+- Ubuntu 18.04 LTS
+- NVIDIA GFORCE GTX 1080 ti
+- CUDA 10.2
+- torch 1.5.1
+- torchvision 0.5.0
+- etc
+
+### 4. Acknowledgement
 Thank you for inspiration and sharing codes for metrics of IS and FID!
 - [PyTorch DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
 - [Inception Score Pytorch](https://github.com/sbarratt/inception-score-pytorch)
