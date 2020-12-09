@@ -15,7 +15,7 @@ This repository contains implementations of various GANs using CelebA dataset. T
 ### 1. Qualitative Analysis
 | DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAGEGAN|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './6. VAEGAN (Variational Autoencoder GAN)/results/samples/generation/Face_Generation_Epoch_040.png'> |
+| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './6. VAE-GAN (Variational Autoencoder GAN)/results/samples/generation/Face_Generation_Epoch_040.png'> |
 
 ### 2. Quantitative Analysis
 | Model | IS↑ | FID↓ |
