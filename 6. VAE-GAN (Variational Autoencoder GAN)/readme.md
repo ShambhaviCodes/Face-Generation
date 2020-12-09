@@ -7,7 +7,12 @@ This folder contains the implementation of VAEGAN.
 ### 1. Results
 1) Qualitative Analysis
 
-<img src = './results/samples/Face_Generation_Epoch_40.png'>
+#### Generation
+<img src = './results/samples/generation/Face_Generation_Epoch_40.png'>
+
+#### Reconstruction
+<img src = './results/samples/reconstruction/Face_Generation_Epoch_40.png'>
+
 
 2) Quantative Analysis
 
