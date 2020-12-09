@@ -8,10 +8,10 @@ This folder contains the implementation of VAEGAN.
 1) Qualitative Analysis
 
 #### Generation
-<img src = './results/samples/generation/Face_Generation_Epoch_40.png'>
+<img src = './results/samples/generation/Face_Generation_Epoch_040.png'>
 
 #### Reconstruction
-<img src = './results/samples/reconstruction/Face_Generation_Epoch_40.png'>
+<img src = './results/samples/reconstruction/Face_Reconstruction_Epoch_040.png'>
 
 
 2) Quantative Analysis
