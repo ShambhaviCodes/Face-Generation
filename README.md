@@ -10,10 +10,10 @@ This repository contains implementations of various GANs using CelebA dataset. T
 - [BEGAN](https://arxiv.org/pdf/1703.10717.pdf)
 - [SAGAN](https://arxiv.org/pdf/1805.08318.pdf)
 - [EBGAN](https://arxiv.org/pdf/1609.03126.pdf)
-- [VAEGAN](https://arxiv.org/pdf/1512.09300.pdf)
+- [VAE-GAN](https://arxiv.org/pdf/1512.09300.pdf)
 
 ### 1. Qualitative Analysis
-| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAGEGAN|
+| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAE-GAN|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './6. VAE-GAN (Variational Autoencoder GAN)/results/samples/generation/Face_Generation_Epoch_040.png'> |
 
@@ -25,7 +25,7 @@ This repository contains implementations of various GANs using CelebA dataset. T
 | BEGAN | 2.362 ± 0.0131 | 9.942 |
 | SAGAN | 2.094 ± 0.0174 | 6.140 |
 | EBGAN | 2.499 ± 0.0186 | 4.946 |
-| VAEGAN | 1.823 ± 0.0074 | 6.314 |
+| VAE-GAN | 1.823 ± 0.0074 | 6.314 |
 
 ### 3. Acknowledgement
 Thank you for inspiration and sharing codes for metrics of IS and FID!
