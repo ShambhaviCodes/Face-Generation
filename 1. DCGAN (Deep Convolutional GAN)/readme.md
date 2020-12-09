@@ -64,9 +64,9 @@ python generate_faces.py
 python inception_score.py
 ```
 
-4) Calculate FID (Frechet Inception Distance) Score
+4) FID (Frechet Inception Distance) Score
 ```
-python fid_score.py './celeba/img_align_celeba/ './results/inference/inference/'
+python fid_score.py './celeba/img_align_celeba/' './results/inference/inference/'
 ```
 
 ### 3. Plot Loss

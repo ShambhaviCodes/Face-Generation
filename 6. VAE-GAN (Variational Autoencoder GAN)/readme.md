@@ -1,19 +1,19 @@
-This folder contains the implementation of BEGAN.
+This folder contains the implementation of VAEGAN.
 
 ### 0. Introduction
-- BEGAN: [BEGAN: Boundary Equilibrium Generative Adversarial Networks](https://arxiv.org/pdf/1703.10717.pdf)
+- VAEGAN: [Autoencoding beyond pixels using a learned similarity metric](https://arxiv.org/pdf/1512.09300.pdf)
 
 
 ### 1. Results
 1) Qualitative Analysis
 
-<img src = './results/samples/Face_Generation_Epoch_100.png'>
+<img src = './results/samples/Face_Generation_Epoch_40.png'>
 
 2) Quantative Analysis
 
 | Model | IS↑ | FID↓ |
 |:-----:|:-----:|:-----:|
-| BEGAN | 2.362 ± 0.0131 | 9.942 |
+| VAEGAN | 1.823 ± 0.0074 | 6.314 |
 
 3) Interpolation
 
@@ -60,4 +60,4 @@ python fid_score.py './celeba/img_align_celeba/' './results/inference/inference/
 ```
 
 ### 3. Plot Loss
-<img src = './results/plots/Face_Generation_Losses_Epoch_100.png'>
+<img src = './results/plots/Face_Generation_Losses_Epoch_40.png'>

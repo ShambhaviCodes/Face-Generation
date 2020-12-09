@@ -6,7 +6,7 @@ from config import *
 
 
 def get_celeba_loader(path, batch_size):
-
+    """CelebA Loader"""
     transform = transforms.Compose([
         transforms.Resize((config.crop_size, config.crop_size)),
         transforms.ToTensor(),
