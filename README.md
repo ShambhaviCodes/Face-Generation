@@ -9,12 +9,13 @@ This repository contains implementations of various GANs using CelebA dataset. T
 - [WGAN-GP](https://arxiv.org/pdf/1704.00028.pdf)
 - [BEGAN](https://arxiv.org/pdf/1703.10717.pdf)
 - [SAGAN](https://arxiv.org/pdf/1805.08318.pdf)
-- [EBGAN](https://arxiv.org/pdf/1609.03126.pdf).
+- [EBGAN](https://arxiv.org/pdf/1609.03126.pdf)
+- [VAEGAN](https://arxiv.org/pdf/1512.09300.pdf)
 
 ### 1. Qualitative Analysis
-| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN |
-|:-----:|:-----:|:-----:|:-----:|:-----:|
-| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> |
+| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAGEGAN|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './6. VAEGAN (Variational Autoencoder GAN)/results/samples/generation/Face_Generation_Epoch_040.png'> |
 
 ### 2. Quantitative Analysis
 | Model | IS↑ | FID↓ |
@@ -24,17 +25,20 @@ This repository contains implementations of various GANs using CelebA dataset. T
 | BEGAN | 2.362 ± 0.0131 | 9.942 |
 | SAGAN | 2.094 ± 0.0174 | 6.140 |
 | EBGAN | 2.499 ± 0.0186 | 4.946 |
+| VAEGAN | 1.823 ± 0.0074 | 6.314 |
 
-### 3. Development Environment
+### 3. Acknowledgement
+Thank you for inspiration and sharing codes for metrics of IS and FID!
+- [PyTorch DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
+- [Inception Score Pytorch](https://github.com/sbarratt/inception-score-pytorch)
+- [Fréchet Inception Distance (FID score) in PyTorch](https://github.com/mseitzer/pytorch-fid)
+
+### Development Environment
+```
 - Ubuntu 18.04 LTS
 - NVIDIA GFORCE GTX 1080 ti
 - CUDA 10.2
 - torch 1.5.1
 - torchvision 0.5.0
 - etc
-
-### 4. Acknowledgement
-Thank you for inspiration and sharing codes for metrics of IS and FID!
-- [PyTorch DCGAN Tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
-- [Inception Score Pytorch](https://github.com/sbarratt/inception-score-pytorch)
-- [Fréchet Inception Distance (FID score) in PyTorch](https://github.com/mseitzer/pytorch-fid)
+```
