@@ -1,6 +1,6 @@
 # Face-Generation
 
-### 0. Introduction
+### 0. Overview
 
 This repository contains implementations of various GANs using CelebA dataset. The list of papers are below,
 - [DCGAN](https://arxiv.org/pdf/1511.06434.pdf)
@@ -13,9 +13,20 @@ This repository contains implementations of various GANs using CelebA dataset. T
 - [VAE-GAN](https://arxiv.org/pdf/1512.09300.pdf)
 
 ### 1. Qualitative Analysis
-| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAE-GAN|
+#### 1) Generation
+| DCGAN | WGAN-GP | BEGAN | SAGAN | EBGAN | VAE-GAN |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | <img src = './1. DCGAN (Deep Convolutional GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './4. SAGAN (Self-Attention GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './5. EBGAN (Energy-based GAN)/results/samples/Face_Generation_Epoch_100.png'> | <img src = './6. VAE-GAN (Variational Autoencoder GAN)/results/samples/generation/Face_Generation_Epoch_040.png'> |
+
+#### 2) Interpolation
+| GANs | Interpolation |
+|:-----:|:-----:|
+| DCGAN | <img src = './1. DCGAN (Deep Convolutional GAN)/results/interpolation/Generated_Face_Interpolation.png'> |
+| WGAN-GP | <img src = './2. Wasserstein GAN-GP (Gradient Penalty)/results/interpolation/Generated_Face_Interpolation.png'> |
+| BEGAN | <img src = './3. BEGAN (Boundary Equilibrium GAN)/results/interpolation/Generated_Face_Interpolation.png'> |
+| SAGAN | <img src = './4. SAGAN (Self-Attention GAN)/results/interpolation/Generated_Face_Interpolation.png'> |
+| EBGAN | <img src = './5. EBGAN (Energy-based GAN)/results/interpolation/Generated_Face_Interpolation.png'> |
+| VAE-GAN | <img src = './6. VAE-GAN (Variational Autoencoder GAN)/results/interpolation/Generated_Face_Interpolation.png'> |
 
 ### 2. Quantitative Analysis
 | Model | IS↑ | FID↓ |
